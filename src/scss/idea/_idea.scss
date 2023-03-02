@@ -1,0 +1,9 @@
+@use "../foundation/rem" as r;
+
+.idea {
+    margin-bottom: 5rem;
+    h1 {
+        font-size: r.f-rem(20);
+        margin-bottom: 2rem;
+    }
+}
