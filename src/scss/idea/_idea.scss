@@ -2,8 +2,13 @@
 
 .idea {
     margin-bottom: 5rem;
-    h1 {
-        font-size: r.f-rem(20);
+    .header {
         margin-bottom: 2rem;
+        h1 {
+            font-size: r.f-rem(20);
+        }
+        .reference {
+            font-size: 14px;
+        }
     }
 }
