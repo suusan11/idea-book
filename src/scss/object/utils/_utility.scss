@@ -1,0 +1,15 @@
+@use "../../foundation/rem" as r;
+
+.link__wrap {
+    width: 100%;
+    a {
+        font-size: r.f-rem(16);
+        text-decoration: underline;
+        &::before {
+            content: '▶︎';
+            display: inline-block;
+            font-size: r.f-rem(14);
+            margin-right: 0.5rem;
+        }
+    }
+}
