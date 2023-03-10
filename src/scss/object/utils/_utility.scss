@@ -2,7 +2,7 @@
 
 .link__wrap {
     width: 100%;
-    a {
+    .text-link {
         font-size: r.f-rem(16);
         text-decoration: underline;
         &::before {
@@ -11,5 +11,8 @@
             font-size: r.f-rem(14);
             margin-right: 0.5rem;
         }
+    }
+    .font-sm {
+        font-size: r.f-rem(12);
     }
 }
