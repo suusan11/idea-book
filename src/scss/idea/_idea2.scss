@@ -1,0 +1,56 @@
+.idea2 {
+    // custom property
+    .item1 {
+        --bgc: linear-gradient(to right, #00f260, #0575e6);;
+    }
+    .item2 {
+        --bgc: linear-gradient(to right, #fbd3e9, #bb377d);;
+    }
+
+    .item__wrap {
+        width: 48%;
+        height: auto;
+        border-radius: 22px;
+        background: var(--bgc);
+        .item {
+            display: block;
+            width: calc(100% - 4px);
+            height: auto;
+            border-radius: 20px;
+            background: #FFFFFF;
+            padding: 1.5rem 3rem;
+            margin: 2px; // (border width / 2)
+        }
+        .content {
+            width: 100%;
+            .title {
+                text-align: left;
+            }
+            .arrow {
+                position: relative;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: #333333;
+                transition: .3s cubic-bezier(.4,.4,0,1);
+                .icon-arrow {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #FFFFFF;
+                    font-size: 14px;
+                    z-index: 2;
+                }
+            }
+        }
+        &:hover {
+            .item {
+                background: rgba(255, 255, 255, 0.9);
+            }
+            .arrow {
+                transform: scale(1.4, 1.4);
+            }
+        }
+    }
+}
