@@ -1,0 +1,83 @@
+<%
+    page = 'top'
+    path = '/'
+%>
+<%-
+    include('./layout/_head', {
+        meta: pageData['top']
+    });
+%>
+<main>
+    <div class="idea idea4">
+        <div class="header">
+            <h1>dialogを使ったmodal</h1>
+        </div>
+        <div class="l-container l-inner__flex">
+            <div class="item">
+                <div class="modal-1" onclick="openModal(this)"><img class="img" src="https://placehold.jp/200x200.png" alt=""></div>
+                <div class="content">
+                    <p class="name">名前 なまえ</p>
+                    <p class="role">役割</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="modal-2" onclick="openModal(this)"><img class="img" src="https://placehold.jp/200x200.png" alt=""></div>
+                <div class="content">
+                    <p class="name">名前 なまえ</p>
+                    <p class="role">役割</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="modal-3" onclick="openModal(this)"><img class="img" src="https://placehold.jp/200x200.png" alt=""></div>
+                <div class="content">
+                    <p class="name">名前 なまえ</p>
+                    <p class="role">役割</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <dialog id="modal" class="js-modal modal__container" data-class="modal-1">
+        <div id="js-modal-overlay" class="modal__overlay" onclick="closeModal(event)"></div>
+        <div class="modal__area">
+            <button id="js-close-button" class="modal-close-button" onclick="closeModal(event)"><span></span><span></span></button>
+            <div class="modal__content l-inner__flex">
+                <div class="text__wrap">
+                    <p class="title">Modal 1</p>
+                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="img"><img src="https://placehold.jp/300x300.png" alt=""></div>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="modal" class="js-modal modal__container" data-class="modal-2">
+        <div id="js-modal-overlay" class="modal__overlay" onclick="closeModal(event)"></div>
+        <div class="modal__area">
+            <button id="js-close-button" class="modal-close-button" onclick="closeModal(event)"><span></span><span></span></button>
+            <div class="modal__content l-inner__flex">
+                <div class="text__wrap">
+                    <p class="title">Modal 2</p>
+                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="img"><img src="https://placehold.jp/300x300.png" alt=""></div>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="modal" class="js-modal modal__container" data-class="modal-3">
+        <div id="js-modal-overlay" class="modal__overlay" onclick="closeModal(event)"></div>
+        <div class="modal__area">
+            <button id="js-close-button" class="modal-close-button" onclick="closeModal(event)"><span></span><span></span></button>
+            <div class="modal__content l-inner__flex">
+                <div class="text__wrap">
+                    <p class="title">Modal 3</p>
+                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="img"><img src="https://placehold.jp/300x300.png" alt=""></div>
+            </div>
+        </div>
+    </dialog>
+</main>
+<%-
+    include('./layout/_footer', {
+        meta: pageData['top']
+    });
+%>

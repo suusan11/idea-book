@@ -51,6 +51,24 @@ window.onload = () => {
     }
     document.getElementById(window.location.hash.slice(1)).scrollIntoView(true);
 }
+// Intersection Observer
+const targets = document.querySelectorAll('.js-target');
+const options = {
+    root: null,
+    rootMargin: '-30% 0px',
+    threshold: 0
+};
+let observer = new IntersectionObserver(setIntersection, options);
+targets.forEach(target => {
+    observer.observe(target);
+});
+function setIntersection(entries) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('is__active');
+        }
+    })
+}
 
 /* ----------
 IDEA 01
@@ -77,21 +95,30 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 }, false);
 
-// Intersection Observer
-const targets = document.querySelectorAll('.js-target');
-const options = {
-    root: null,
-    rootMargin: '-30% 0px',
-    threshold: 0
-};
-let observer = new IntersectionObserver(setIntersection, options);
-targets.forEach(target => {
-    observer.observe(target);
-});
-function setIntersection(entries) {
-    entries.forEach(entry => {
-        if(entry.isIntersecting) {
-            entry.target.classList.add('is__active');
+
+/* ----------
+IDEA 04
+---------- */
+// Open modal
+const modals = document.querySelectorAll('.js-modal');
+let modalData;
+let targetModal;
+let html = document.documentElement;
+const openModal = (el) => {
+    modals.forEach(modal => {
+        modalData = modal.getAttribute('data-class');
+        if(el.className === modalData) {
+            targetModal = modal;
+            console.log
         }
     })
+    targetModal.setAttribute('open', '');
+    html.classList.add('is__locked');
+}
+// Close modal
+function closeModal(e) {
+    let target = e.target;
+    let parentModal = target.closest("#modal");
+    parentModal.removeAttribute('open');
+    html.classList.remove('is__locked');
 }
