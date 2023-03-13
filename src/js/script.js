@@ -76,3 +76,22 @@ document.addEventListener("DOMContentLoaded", function() {
         setDiagonalDistance(target);
     }
 }, false);
+
+// Intersection Observer
+const targets = document.querySelectorAll('.js-target');
+const options = {
+    root: null,
+    rootMargin: '-30% 0px',
+    threshold: 0
+};
+let observer = new IntersectionObserver(setIntersection, options);
+targets.forEach(target => {
+    observer.observe(target);
+});
+function setIntersection(entries) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('is__active');
+        }
+    })
+}

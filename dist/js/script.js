@@ -97,4 +97,23 @@ document.addEventListener("DOMContentLoaded", function () {
   if (idea1 !== null) {
     setDiagonalDistance(target);
   }
-}, false);
+}, false); // Intersection Observer
+
+var targets = document.querySelectorAll('.js-target');
+var options = {
+  root: null,
+  rootMargin: '-30% 0px',
+  threshold: 0
+};
+var observer = new IntersectionObserver(setIntersection, options);
+targets.forEach(function (target) {
+  observer.observe(target);
+});
+
+function setIntersection(entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is__active');
+    }
+  });
+}
