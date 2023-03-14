@@ -4,5 +4,11 @@
         "title": "(各ページ毎のタイトル)",
         "description": "(各ページ毎の説明)",
         "dir": ""
+    },
+    "idea5": {
+        "page": "idea5",
+        "title": "(各ページ毎のタイトル)",
+        "description": "(各ページ毎の説明)",
+        "dir": ""
     }
 }

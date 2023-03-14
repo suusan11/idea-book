@@ -3,8 +3,12 @@
         <p class="copyright"><small>Copyright© 2021 All Rights Reserved.</small></p>
     </footer>
     <!-- jquery -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script> -->
+    <% if (meta['page'] === "idea5") { %>
+    <script src="https://unpkg.com/three@0.140.2/build/three.min.js"></script>
+    <script type="text/javascript" src="<%= path %>js/three.min.js"></script>
+    <% } %>
     <!-- common -->
     <script type="text/javascript" src="<%= path %>js/script.min.js"></script>
 </body>
