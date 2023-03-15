@@ -78,21 +78,23 @@ function init() {
       renderer.render(scene, camera); // レンダリング
 
       requestAnimationFrame(tick);
-    } // onResize();
-    //     // リサイズイベント発生時に実行
-    //     window.addEventListener('resize', onResize);
-    //     function onResize() {
-    //     // サイズをアップデート
-    //     sizes.width = window.innerWidth;
-    //     sizes.height = window.innerHeight;
-    //     // カメラのアスペクト比を正す
-    //     camera.aspect = sizes.width / sizes.height;
-    //     camera.updateProjectionMatrix();
-    //     // レンダラーのサイズを調整する
-    //     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    //     renderer.setSize(sizes.width, sizes.height);
-    // }
+    }
 
+    onResize(); // リサイズイベント発生時に実行
+
+    window.addEventListener('resize', onResize);
+
+    function onResize() {
+      // サイズをアップデート
+      sizes.width = wrapper.clientWidth;
+      sizes.height = wrapper.clientHeight; // カメラのアスペクト比を正す
+
+      camera.aspect = sizes.width / sizes.height;
+      camera.updateProjectionMatrix(); // レンダラーのサイズを調整する
+
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setSize(sizes.width, sizes.height);
+    }
   }
   {
     var _wrapper = document.getElementById('wrapper2'); // サイズを取得
@@ -200,21 +202,26 @@ function init() {
 
 
       requestAnimationFrame(tick);
-    } // onResize();
-    //     // リサイズイベント発生時に実行
-    //     window.addEventListener('resize', onResize);
-    //     function onResize() {
-    //     // サイズをアップデート
-    //     sizes.width = window.innerWidth;
-    //     sizes.height = window.innerHeight;
-    //     // カメラのアスペクト比を正す
-    //     camera.aspect = sizes.width / sizes.height;
-    //     camera.updateProjectionMatrix();
-    //     // レンダラーのサイズを調整する
-    //     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    //     renderer.setSize(sizes.width, sizes.height);
-    // }
+    }
 
+    onResize(); // リサイズイベント発生時に実行
+
+    window.addEventListener('resize', onResize);
+
+    function onResize() {
+      // サイズをアップデート
+      _sizes.width = _wrapper.clientWidth;
+      _sizes.height = _wrapper.clientHeight; // カメラのアスペクト比を正す
+
+      _camera.aspect = _sizes.width / _sizes.height;
+
+      _camera.updateProjectionMatrix(); // レンダラーのサイズを調整する
+
+
+      _renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      _renderer.setSize(_sizes.width, _sizes.height);
+    }
   }
   {
     var _wrapper2 = document.getElementById('wrapper3'); // サイズを取得
@@ -323,21 +330,26 @@ function init() {
 
 
       requestAnimationFrame(tick);
-    } // onResize();
-    //     // リサイズイベント発生時に実行
-    //     window.addEventListener('resize', onResize);
-    //     function onResize() {
-    //     // サイズをアップデート
-    //     sizes.width = window.innerWidth;
-    //     sizes.height = window.innerHeight;
-    //     // カメラのアスペクト比を正す
-    //     camera.aspect = sizes.width / sizes.height;
-    //     camera.updateProjectionMatrix();
-    //     // レンダラーのサイズを調整する
-    //     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    //     renderer.setSize(sizes.width, sizes.height);
-    // }
+    }
 
+    onResize(); // リサイズイベント発生時に実行
+
+    window.addEventListener('resize', onResize);
+
+    function onResize() {
+      // サイズをアップデート
+      _sizes2.width = _wrapper2.clientWidth;
+      _sizes2.height = _wrapper2.clientHeight; // カメラのアスペクト比を正す
+
+      _camera2.aspect = _sizes2.width / _sizes2.height;
+
+      _camera2.updateProjectionMatrix(); // レンダラーのサイズを調整する
+
+
+      _renderer2.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      _renderer2.setSize(_sizes2.width, _sizes2.height);
+    }
   }
   {
     var _wrapper3 = document.getElementById('wrapper4'); // サイズを取得
@@ -455,25 +467,31 @@ function init() {
 
 
       requestAnimationFrame(tick);
-    } // onResize();
-    //     // リサイズイベント発生時に実行
-    //     window.addEventListener('resize', onResize);
-    //     function onResize() {
-    //     // サイズをアップデート
-    //     sizes.width = window.innerWidth;
-    //     sizes.height = window.innerHeight;
-    //     // カメラのアスペクト比を正す
-    //     camera.aspect = sizes.width / sizes.height;
-    //     camera.updateProjectionMatrix();
-    //     // レンダラーのサイズを調整する
-    //     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    //     renderer.setSize(sizes.width, sizes.height);
-    // }
+    }
 
+    onResize(); // リサイズイベント発生時に実行
+
+    window.addEventListener('resize', onResize);
+
+    function onResize() {
+      // サイズをアップデート
+      _sizes3.width = _wrapper3.clientWidth;
+      _sizes3.height = _wrapper3.clientHeight; // カメラのアスペクト比を正す
+
+      _camera3.aspect = _sizes3.width / _sizes3.height;
+
+      _camera3.updateProjectionMatrix(); // レンダラーのサイズを調整する
+
+
+      _renderer3.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      _renderer3.setSize(_sizes3.width, _sizes3.height);
+    }
   }
   {
-    var _wrapper4 = document.getElementById('wrapper5'); // サイズを取得
+    var _wrapper4 = document.getElementById('wrapper5');
 
+    var canvas = document.querySelector('#myCanvas5'); // サイズを取得
 
     var _sizes4 = {
       width: _wrapper4.clientWidth,
@@ -481,7 +499,7 @@ function init() {
     }; // レンダラーを作成
 
     var _renderer4 = new THREE.WebGLRenderer({
-      canvas: document.querySelector('#myCanvas5')
+      canvas: canvas
     });
 
     _renderer4.setClearColor(new THREE.Color(0xFAFAFA)); //背景色
@@ -502,7 +520,7 @@ function init() {
 
     var _torusGeometry4 = new THREE.TorusGeometry(100, 50, 16, 100);
 
-    var _torusMaterial4 = new THREE.MeshBasicMaterial({
+    var _torusMaterial4 = new THREE.MeshStandardMaterial({
       color: 0xFF8761
     });
 
@@ -515,7 +533,7 @@ function init() {
 
     var _sphereGeometry4 = new THREE.SphereGeometry(50, 30, 30);
 
-    var _sphereMaterial4 = new THREE.MeshBasicMaterial({
+    var _sphereMaterial4 = new THREE.MeshStandardMaterial({
       color: 0x87D1B3
     });
 
@@ -528,7 +546,7 @@ function init() {
 
     var _boxGeometry4 = new THREE.BoxGeometry(100, 100, 100);
 
-    var _boxMaterial4 = new THREE.MeshBasicMaterial({
+    var _boxMaterial4 = new THREE.MeshStandardMaterial({
       color: 0xB5E1E5
     });
 
@@ -541,7 +559,7 @@ function init() {
 
     var _coneGeometry4 = new THREE.ConeGeometry(60, 80, 100);
 
-    var _coneMaterial4 = new THREE.MeshBasicMaterial({
+    var _coneMaterial4 = new THREE.MeshStandardMaterial({
       color: 0xF8F190
     });
 
@@ -560,6 +578,8 @@ function init() {
 
 
     var _pointLight = new THREE.PointLight(0xffffff, 2, 1000);
+
+    _pointLight.position.set(0, 0, 400);
 
     _scene4.add(_pointLight);
 
@@ -591,33 +611,334 @@ function init() {
 
 
     var mouse = new THREE.Vector2(0, 0);
-    mouseMoved(x, y);
-    window.addEventListener('mousemove', function (e) {
-      canvas.mouseMoved(e.clientX, e.clientY);
-    });
+    canvas.addEventListener('mousemove', mouseMoved);
 
-    function mouseMoved(x, y) {
-      mouse.x = x - _sizes4.width / 2; // 原点を中心に持ってくる
+    function mouseMoved(e) {
+      mouse.x = e.clientX - _sizes4.width / 2; // 原点を中心に持ってくる
 
-      mouse.y = -y + _sizes4.height / 2; // 軸を反転して原点を中心に持ってくる
+      mouse.y = -e.clientY + _sizes4.height / 2; // 軸を反転して原点を中心に持ってくる
       // ライトの xy座標 をマウス位置にする
 
       _pointLight.position.x = mouse.x;
       _pointLight.position.y = mouse.y;
-    } // onResize();
-    //     // リサイズイベント発生時に実行
-    //     window.addEventListener('resize', onResize);
-    //     function onResize() {
-    //     // サイズをアップデート
-    //     sizes.width = window.innerWidth;
-    //     sizes.height = window.innerHeight;
-    //     // カメラのアスペクト比を正す
-    //     camera.aspect = sizes.width / sizes.height;
-    //     camera.updateProjectionMatrix();
-    //     // レンダラーのサイズを調整する
-    //     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    //     renderer.setSize(sizes.width, sizes.height);
-    // }
+    }
 
+    onResize(); // リサイズイベント発生時に実行
+
+    window.addEventListener('resize', onResize);
+
+    function onResize() {
+      // サイズをアップデート
+      _sizes4.width = _wrapper4.clientWidth;
+      _sizes4.height = _wrapper4.clientHeight; // カメラのアスペクト比を正す
+
+      _camera4.aspect = _sizes4.width / _sizes4.height;
+
+      _camera4.updateProjectionMatrix(); // レンダラーのサイズを調整する
+
+
+      _renderer4.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      _renderer4.setSize(_sizes4.width, _sizes4.height);
+    }
+  }
+  {
+    var _wrapper5 = document.getElementById('wrapper6');
+
+    var _canvas = document.querySelector('#myCanvas6'); // サイズを取得
+
+
+    var _sizes5 = {
+      width: _wrapper5.clientWidth,
+      height: _wrapper5.clientHeight
+    }; // レンダラーを作成
+
+    var _renderer5 = new THREE.WebGLRenderer({
+      canvas: _canvas
+    });
+
+    _renderer5.setClearColor(new THREE.Color(0xFAFAFA)); //背景色
+
+
+    _renderer5.setPixelRatio(window.devicePixelRatio);
+
+    _renderer5.setSize(_sizes5.width, _sizes5.height); // シーンを作成
+
+
+    var _scene5 = new THREE.Scene(); // カメラを作成
+
+
+    var _camera5 = new THREE.PerspectiveCamera(40, _sizes5.width / _sizes5.height);
+
+    _camera5.position.set(0, 0, +1000); // ドーナツ
+
+
+    var _torusGeometry5 = new THREE.TorusGeometry(100, 50, 16, 100);
+
+    var _torusMaterial5 = new THREE.MeshBasicMaterial({
+      color: 0xFF8761
+    });
+
+    var _torus5 = new THREE.Mesh(_torusGeometry5, _torusMaterial5);
+
+    _scene5.add(_torus5);
+
+    _torus5.position.x = 150;
+    _torus5.position.y = -200;
+    _torus5.rotation.y = 4;
+    _torus5.rotation.x = -3; // 球体
+
+    var _sphereGeometry5 = new THREE.SphereGeometry(50, 30, 30);
+
+    var _sphereMaterial5 = new THREE.MeshBasicMaterial({
+      color: 0x87D1B3
+    });
+
+    var _sphere5 = new THREE.Mesh(_sphereGeometry5, _sphereMaterial5);
+
+    _scene5.add(_sphere5);
+
+    _sphere5.position.x = -100;
+    _sphere5.position.y = 100; // 箱
+
+    var _boxGeometry5 = new THREE.BoxGeometry(100, 100, 100);
+
+    var _boxMaterial5 = new THREE.MeshBasicMaterial({
+      color: 0xB5E1E5
+    });
+
+    var _box5 = new THREE.Mesh(_boxGeometry5, _boxMaterial5);
+
+    _scene5.add(_box5);
+
+    _box5.position.x = -200;
+    _box5.position.y = -100; //円柱
+
+    var _coneGeometry5 = new THREE.ConeGeometry(60, 80, 100);
+
+    var _coneMaterial5 = new THREE.MeshBasicMaterial({
+      color: 0xF8F190
+    });
+
+    var _cone5 = new THREE.Mesh(_coneGeometry5, _coneMaterial5);
+
+    _scene5.add(_cone5);
+
+    _cone5.position.x = 300;
+    _cone5.position.y = 200;
+    tick(); // 毎フレーム時に実行されるループイベントです
+
+    function tick() {
+      // torus
+      // torus.rotation.y += 0.01;
+      // torus.rotation.x += 0.01;
+      // // sphere
+      // sphere.rotation.y += 0.02;
+      // sphere.rotation.x += 0.02;
+      // // box
+      // box.rotation.y += 0.005;
+      // box.rotation.x -= 0.005;
+      // // cone
+      // cone.rotation.y += 0.01;
+      // cone.rotation.z += 0.005;
+      _renderer5.render(_scene5, _camera5); // レンダリング
+
+
+      requestAnimationFrame(tick);
+    } // マウス座標
+
+
+    var _mouse = new THREE.Vector2(0, 0);
+
+    var rot = 0;
+
+    _canvas.addEventListener('mousemove', mouseMoved);
+
+    function mouseMoved(e) {
+      var element = e.currentTarget; // canvas要素上のXY座標
+
+      var x = e.clientX - element.offsetLeft;
+      var y = e.clientY - element.offsetTop; // canvas要素の幅・高さ
+
+      var w = element.offsetWidth;
+      var h = element.offsetHeight; // -1〜+1の範囲で現在のマウス座標を登録する
+
+      _mouse.x = x / w * 2 - 1;
+      _mouse.y = -(y / h) * 2 + 1; // torus
+
+      _torus5.rotation.x = _mouse.x;
+      _torus5.rotation.y = _mouse.y; // sphere
+
+      _sphere5.rotation.x = _mouse.x;
+      _sphere5.rotation.y = _mouse.y; // box
+
+      _box5.rotation.x = _mouse.x;
+      _box5.rotation.y = _mouse.y; // cone
+
+      _cone5.rotation.z = _mouse.x;
+      _cone5.rotation.y = _mouse.y;
+    }
+
+    onResize(); // リサイズイベント発生時に実行
+
+    window.addEventListener('resize', onResize);
+
+    function onResize() {
+      // サイズをアップデート
+      _sizes5.width = _wrapper5.clientWidth;
+      _sizes5.height = _wrapper5.clientHeight; // カメラのアスペクト比を正す
+
+      _camera5.aspect = _sizes5.width / _sizes5.height;
+
+      _camera5.updateProjectionMatrix(); // レンダラーのサイズを調整する
+
+
+      _renderer5.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      _renderer5.setSize(_sizes5.width, _sizes5.height);
+    }
+  }
+  {
+    var _wrapper6 = document.getElementById('wrapper7');
+
+    var _canvas2 = document.querySelector('#myCanvas7'); // サイズを取得
+
+
+    var _sizes6 = {
+      width: _wrapper6.clientWidth,
+      height: _wrapper6.clientHeight
+    }; // レンダラーを作成
+
+    var _renderer6 = new THREE.WebGLRenderer({
+      canvas: _canvas2
+    });
+
+    _renderer6.setClearColor(new THREE.Color(0xFAFAFA)); //背景色
+
+
+    _renderer6.setPixelRatio(window.devicePixelRatio);
+
+    _renderer6.setSize(_sizes6.width, _sizes6.height); // シーンを作成
+
+
+    var _scene6 = new THREE.Scene(); // カメラを作成
+
+
+    var _camera6 = new THREE.PerspectiveCamera(40, _sizes6.width / _sizes6.height);
+
+    _camera6.position.set(0, 0, +1000); // ドーナツ
+
+
+    var _torusGeometry6 = new THREE.TorusGeometry(100, 50, 16, 100);
+
+    var _torusMaterial6 = new THREE.MeshBasicMaterial({
+      color: 0xFF8761
+    });
+
+    var _torus6 = new THREE.Mesh(_torusGeometry6, _torusMaterial6);
+
+    _scene6.add(_torus6);
+
+    _torus6.position.x = 150;
+    _torus6.position.y = -200; // 球体
+
+    var _sphereGeometry6 = new THREE.SphereGeometry(50, 30, 30);
+
+    var _sphereMaterial6 = new THREE.MeshBasicMaterial({
+      color: 0x87D1B3
+    });
+
+    var _sphere6 = new THREE.Mesh(_sphereGeometry6, _sphereMaterial6);
+
+    _scene6.add(_sphere6);
+
+    _sphere6.position.x = -100;
+    _sphere6.position.y = 100; // 箱
+
+    var _boxGeometry6 = new THREE.BoxGeometry(100, 100, 100);
+
+    var _boxMaterial6 = new THREE.MeshBasicMaterial({
+      color: 0xB5E1E5
+    });
+
+    var _box6 = new THREE.Mesh(_boxGeometry6, _boxMaterial6);
+
+    _scene6.add(_box6);
+
+    _box6.position.x = -200;
+    _box6.position.y = -100; //円柱
+
+    var _coneGeometry6 = new THREE.ConeGeometry(60, 80, 100);
+
+    var _coneMaterial6 = new THREE.MeshBasicMaterial({
+      color: 0xF8F190
+    });
+
+    var _cone6 = new THREE.Mesh(_coneGeometry6, _coneMaterial6);
+
+    _scene6.add(_cone6);
+
+    _cone6.position.x = 300;
+    _cone6.position.y = 200;
+    var _rot = 0; // 角度
+
+    var mouseX = 0; // マウス座標
+    // マウス座標はマウスが動いた時のみ取得できる
+
+    document.addEventListener("mousemove", function (event) {
+      mouseX = event.pageX;
+    });
+    tick(); // 毎フレーム時に実行されるループイベントです
+
+    function tick() {
+      _torus6.rotation.y += 0.01;
+      _torus6.rotation.x += 0.01; // sphere
+
+      _sphere6.rotation.y += 0.02;
+      _sphere6.rotation.x += 0.02; // box
+
+      _box6.rotation.y += 0.005;
+      _box6.rotation.x -= 0.005; // cone
+
+      _cone6.rotation.y += 0.01;
+      _cone6.rotation.z += 0.005; // マウスの位置に応じて角度を設定
+      // マウスのX座標がステージの幅の何%の位置にあるか調べてそれを360度で乗算する
+
+      var targetRot = mouseX / window.innerWidth * 360; // イージングの公式を用いて滑らかにする
+      // 値 += (目標値 - 現在の値) * 減速値
+
+      _rot += (targetRot - _rot) * 0.02; // ラジアンに変換する
+
+      var radian = _rot * Math.PI / 180; // 角度に応じてカメラの位置を設定
+
+      _camera6.position.x = 1000 * Math.sin(radian);
+      _camera6.position.z = 1000 * Math.cos(radian); // 原点方向を見つめる
+
+      _camera6.lookAt(new THREE.Vector3(0, 0, 0));
+
+      _renderer6.render(_scene6, _camera6); // レンダリング
+
+
+      requestAnimationFrame(tick);
+    }
+
+    onResize(); // リサイズイベント発生時に実行
+
+    window.addEventListener('resize', onResize);
+
+    function onResize() {
+      // サイズをアップデート
+      _sizes6.width = _wrapper6.clientWidth;
+      _sizes6.height = _wrapper6.clientHeight; // カメラのアスペクト比を正す
+
+      _camera6.aspect = _sizes6.width / _sizes6.height;
+
+      _camera6.updateProjectionMatrix(); // レンダラーのサイズを調整する
+
+
+      _renderer6.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      _renderer6.setSize(_sizes6.width, _sizes6.height);
+    }
   }
 }
