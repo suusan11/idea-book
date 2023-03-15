@@ -148,3 +148,27 @@ function closeModal(e) {
   parentModal.removeAttribute('open');
   html.classList.remove('is__locked');
 }
+/* ----------
+IDEA 06
+---------- */
+
+
+var checkbox = document.getElementById('toggle');
+var modeArea = document.getElementById('js-idea6');
+
+if (checkbox !== null) {
+  checkbox.addEventListener('click', function () {
+    var title = document.getElementById('mode');
+    title.innerHTML = checkbox.checked ? 'ON 🌝' : 'OFF 🌞';
+
+    if (checkbox.checked) {
+      // ダークモード
+      modeArea.classList.remove("light-theme");
+      modeArea.classList.add("dark-theme");
+    } else {
+      // ライトモード
+      modeArea.classList.remove("dark-theme");
+      modeArea.classList.add("light-theme");
+    }
+  });
+}

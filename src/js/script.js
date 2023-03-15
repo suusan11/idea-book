@@ -122,3 +122,24 @@ function closeModal(e) {
     parentModal.removeAttribute('open');
     html.classList.remove('is__locked');
 }
+
+/* ----------
+IDEA 06
+---------- */
+const checkbox = document.getElementById('toggle');
+const modeArea = document.getElementById('js-idea6');
+if(checkbox !== null) {
+    checkbox.addEventListener('click', () => {
+        const title = document.getElementById('mode');
+        title.innerHTML = checkbox.checked ? 'ON 🌝' : 'OFF 🌞';
+        if (checkbox.checked) {
+            // ダークモード
+            modeArea.classList.remove("light-theme");
+            modeArea.classList.add("dark-theme");
+        } else {
+            // ライトモード
+            modeArea.classList.remove("dark-theme");
+            modeArea.classList.add("light-theme");
+        }
+    });
+}
