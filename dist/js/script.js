@@ -172,3 +172,35 @@ if (checkbox !== null) {
     }
   });
 }
+/* ----------
+IDEA 08
+---------- */
+
+
+var target2 = document.getElementById('js-gradient');
+var options2 = {
+  threshold: buildThresholdList()
+};
+var observer2 = new IntersectionObserver(showElements, options2);
+observer2.observe(target2); // threshold の設定
+
+function buildThresholdList() {
+  var thresholds = [];
+  var numSteps = 20;
+
+  for (var i = 1; i <= numSteps; i++) {
+    var ratio = i / numSteps;
+    thresholds.push(ratio);
+  }
+
+  return thresholds;
+}
+
+function showElements(entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      var ratio = Math.round(entry.intersectionRatio * 100);
+      target2.style.backgroundImage = "\n                linear-gradient(\n                45deg,\n                rgb(37, 47, 255) ".concat(0 - ratio, "%,\n                rgb(124, 192, 226) ").concat(100 - ratio, "%,\n                rgb(37, 47, 255) ").concat(200 - ratio, "%\n            )");
+    }
+  });
+}

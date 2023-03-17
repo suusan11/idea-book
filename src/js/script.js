@@ -143,3 +143,40 @@ if(checkbox !== null) {
         }
     });
 }
+
+/* ----------
+IDEA 08
+---------- */
+const target2 = document.getElementById('js-gradient');
+const options2 = {
+    threshold: buildThresholdList()
+};
+let observer2 = new IntersectionObserver(showElements, options2);
+observer2.observe(target2);
+
+// threshold の設定
+function buildThresholdList() {
+    let thresholds = [];
+    let numSteps = 20;
+
+    for (let i = 1; i <= numSteps; i++) {
+        let ratio = i / numSteps;
+        thresholds.push(ratio);
+    }
+    return thresholds;
+}
+
+function showElements(entries) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            let ratio = Math.round(entry.intersectionRatio * 100);
+            target2.style.backgroundImage = `
+                linear-gradient(
+                45deg,
+                rgb(37, 47, 255) ${0 - ratio}%,
+                rgb(124, 192, 226) ${100 - ratio}%,
+                rgb(37, 47, 255) ${200 - ratio}%
+            )`;
+        }
+    })
+}

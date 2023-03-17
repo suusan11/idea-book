@@ -1,0 +1,33 @@
+<%
+    page = 'top'
+    path = '/'
+%>
+<%-
+    include('./layout/_head', {
+        meta: pageData['top']
+    });
+%>
+<main>
+    <div class="idea idea8">
+        <div class="header">
+            <h1>スクロールに連動してグラデが変わるテキスト</h1>
+            <p class="reference">参考サイト：<a href="https://rejouice.com/">https://rejouice.com/</a></p>
+        </div>
+        <div class="text__wrapper l-container">
+            <p class="guide">&darr;	SCROLL &darr;</p>
+            <div id="js-gradient" class="text__area">
+                <p class="text">吾輩は猫である。</p>
+                <p class="text">名前はまだ無い。</p>
+                <p class="text">どこで生れたかとんと見当がつかぬ。</p>
+                <p class="text">何でも薄暗いじめじめした所で</p>
+                <p class="text">ニャーニャー泣いていた事だけは記憶している。</p>
+                <p class="text">吾輩はここで始めて人間というものを見た。</p>
+            </div>
+        </div>
+    </div>
+</main>
+<%-
+    include('./layout/_footer', {
+        meta: pageData['top']
+    });
+%>
