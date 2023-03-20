@@ -1,0 +1,65 @@
+<%
+    page = 'top'
+    path = '/'
+%>
+<%-
+    include('./layout/_head', {
+        meta: pageData['top']
+    });
+%>
+<main>
+    <div id="js-idea1" class="idea idea9">
+        <div class="bg-change">
+            <div class="header">
+                <h1>hover03</h1>
+                <p class="reference">参考サイト：<a href="https://soles-gaufrette.com/">https://soles-gaufrette.com/</a></p>
+            </div>
+            <div class="l-inner__flex l-container">
+                <a href="javascript:void(0)" class="item from-top"><span>HOVER ME</span></a>
+                <a href="javascript:void(0)" class="item from-bottom"><span>HOVER ME</span></a>
+                <a href="javascript:void(0)" class="item from-left"><span>HOVER ME</span></a>
+                <a href="javascript:void(0)" class="item from-right"><span>HOVER ME</span></a>
+            </div>
+        </div>
+        <div class="arrow-appear">
+            <div class="header">
+                <h1>hover04</h1>
+                <p class="reference">参考サイト：<a href="https://plus-c.chuo-u.ac.jp/">https://plus-c.chuo-u.ac.jp/</a></p>
+            </div>
+            <div class="l-inner__flex l-container">
+                <a href="javascript:void(0)" class="item">
+                    <span>HOVER ME</span>
+                    <svg class="arrow" width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.24902 4H13.2505" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M11.7505 1L14.7509 3.99963L11.7505 7" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="with-mouse">
+            <div class="header">
+                <h1>hover05 マウスに合わせて要素が傾く</h1>
+                <p class="reference">参考サイト：<a href="https://weareadaptable.com/">https://weareadaptable.com/</a></p>
+            </div>
+            <ul class="l-inner__flex l-container">
+                <li class="item js-mouse-item">
+                    <p class="title">HOVER ME</p>
+                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </li>
+                <li class="item js-mouse-item">
+                    <p class="title">HOVER ME</p>
+                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </li>
+                <li class="item js-mouse-item">
+                    <p class="title">HOVER ME</p>
+                    <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<%-
+    include('./layout/_footer', {
+        meta: pageData['top']
+    });
+%>
