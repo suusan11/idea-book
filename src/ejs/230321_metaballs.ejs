@@ -1,0 +1,24 @@
+<%
+    page = 'idea10'
+    path = '/'
+%>
+<%-
+    include('./layout/_head', {
+        meta: pageData['idea10']
+    });
+%>
+<main>
+    <div class="idea idea10">
+        <div class="header">
+            <h1>Metaballs by Three.js</h1>
+        </div>
+        <div id="metaballs__wrap" class="three__wrap">
+            <canvas id="metaballs"></canvas>
+        </div>
+    </div>
+</main>
+<%-
+    include('./layout/_footer', {
+        meta: pageData['idea10']
+    });
+%>

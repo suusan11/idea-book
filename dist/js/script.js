@@ -232,3 +232,10 @@ if (mouseTargets !== null) {
     });
   });
 }
+
+var words = document.querySelectorAll('.blink .word');
+
+for (var i = 0; i < words.length; i++) {
+  var delayTime = Math.random() * 0.1;
+  words[i].style.animationDelay = "".concat(delayTime, "s");
+}

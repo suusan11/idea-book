@@ -114,6 +114,7 @@
     }
 
     .with-mouse {
+        margin-bottom: 5rem;
         .item {
             width: 32%;
             border-radius: 20px;
@@ -137,6 +138,38 @@
             }
             &:nth-child(3) {
                 background-color: #88A3E2;
+            }
+        }
+    }
+
+    .blink {
+        .item {
+            display: block;
+            width: min(80%, 330px);
+            background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+            border-radius: 20px;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0rem;
+            padding: 1.5rem 0;
+            margin: 0 auto;
+            &:hover {
+                .word {
+                    animation: text-blink .13s linear;
+                    animation-iteration-count: 2;
+                }
+            }
+        }
+        @keyframes text-blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.35;
+            }
+            100% {
+                opacity: 1;
             }
         }
     }

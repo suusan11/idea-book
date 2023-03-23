@@ -205,3 +205,9 @@ if(mouseTargets !== null) {
         })
     })
 }
+
+const words = document.querySelectorAll('.blink .word');
+for(let i = 0; i < words.length; i++) {
+    const delayTime = Math.random() * 0.1;
+    words[i].style.animationDelay = `${delayTime}s`
+}
