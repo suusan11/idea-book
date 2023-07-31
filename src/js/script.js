@@ -71,7 +71,7 @@ function setIntersection(entries) {
 }
 
 /* ----------
-IDEA 01
+IDEA 01 - hover
 ---------- */
 let target = document.querySelectorAll(".item__wrap");
 function setDiagonalDistance(t) {
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /* ----------
-IDEA 04
+IDEA 04 - 230313 dialog
 ---------- */
 // Open modal
 const modals = document.querySelectorAll('.js-modal');
@@ -109,7 +109,7 @@ const openModal = (el) => {
         modalData = modal.getAttribute('data-class');
         if(el.className === modalData) {
             targetModal = modal;
-            console.log
+            console.log(targetModal);
         }
     })
     targetModal.setAttribute('open', '');
@@ -124,7 +124,7 @@ function closeModal(e) {
 }
 
 /* ----------
-IDEA 06
+IDEA 06 - 230315 dark mode
 ---------- */
 const checkbox = document.getElementById('toggle');
 const modeArea = document.getElementById('js-idea6');
@@ -145,7 +145,7 @@ if(checkbox !== null) {
 }
 
 /* ----------
-IDEA 08
+IDEA 08 - 230317 scroll-text2
 ---------- */
 const target2 = document.getElementById('js-gradient');
 if(target2 !== null) {
@@ -184,7 +184,7 @@ if(target2 !== null) {
 }
 
 /* ----------
-IDEA 09
+IDEA 09 - 230320 hover
 ---------- */
 const mouseTargets = document.querySelectorAll('.js-mouse-item');
 if(mouseTargets !== null) {
@@ -211,3 +211,107 @@ for(let i = 0; i < words.length; i++) {
     const delayTime = Math.random() * 0.1;
     words[i].style.animationDelay = `${delayTime}s`
 }
+
+/* ----------
+IDEA 11 - 230323 scroll image
+---------- */
+const kurukuru = document.getElementById('js-kurukuru');
+if(kurukuru !== null) {
+    const optionsKurukuru = {
+        root: null,
+        rootMargin: '50% 0px -50% 0px',
+        threshold: buildThresholdList()
+    };
+    let observerKurukuru = new IntersectionObserver(imageKurukuru, optionsKurukuru);
+    observerKurukuru.observe(kurukuru);
+    
+    // threshold の設定
+    function buildThresholdList() {
+        let thresholds = [];
+        let numSteps = 100;
+    
+        for (let i = 1; i <= numSteps; i++) {
+            let ratio = i / numSteps;
+            thresholds.push(ratio);
+        }
+        return thresholds;
+    }
+    
+    function imageKurukuru(entries) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                let ratio = Math.round(entry.intersectionRatio * 100);
+                kurukuru.style.transform = `rotate(${ratio}deg)`;
+                console.log(ratio);
+            }
+        })
+    }
+}
+
+/* ----------
+IDEA 12 - 230731 Lenis and GSAP
+---------- */
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+});
+
+function raf(time) {
+    lenis.raf(time);
+    ScrollTrigger.update();
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+const section_1 = document.getElementById("js-vertical");
+const col_left = document.querySelector(".col_left");
+const timeln = gsap.timeline({ paused: true }); //読み込んだデフォルト時に止まった状態にする
+
+ScrollTrigger.matchMedia({
+    "(min-width: 481px)": function () {
+        timeln.fromTo(col_left, {y: 0}, {y: '170vh', duration: 1, ease: 'none'}, 0);
+    },
+    "(max-width: 480px)": function () {
+        timeln.fromTo(col_left, {y: 0}, {y: 0, duration: 1, ease: 'none'}, 0);
+    },
+})
+
+const scroll_1 = ScrollTrigger.create({
+    animation: timeln, //発火させるアニメーションの指定
+    trigger: section_1,
+    start: 'top top',
+    end: 'bottom center',
+    scrub: true,
+});
+
+const section_2 = document.getElementById("js-horizontal");
+let box_items = gsap.utils.toArray(".horizontal__item");
+ScrollTrigger.matchMedia({
+    "(min-width: 481px)": function () {
+        gsap.to(box_items, {
+            xPercent: -100 * (box_items.length - 1),
+            ease: "sine.out",
+            scrollTrigger: {
+                trigger: section_2,
+                pin: true,
+                scrub: 3,
+                snap: 1 / (box_items.length - 1),
+                end: "+=" + section_2.offsetWidth, //横スクロールだからコンテントの横幅が終わり値になる
+            }
+        });
+    },
+    "(max-width: 480px)": function () {
+        gsap.to(box_items, {
+            xPercent: -115 * (box_items.length - 1),
+            ease: "sine.out",
+            scrollTrigger: {
+                trigger: section_2,
+                pin: true,
+                scrub: 3,
+                snap: 1 / (box_items.length - 1),
+                end: "+=" + section_2.offsetWidth, //横スクロールだからコンテントの横幅が終わり値になる
+            }
+        });
+    },
+})

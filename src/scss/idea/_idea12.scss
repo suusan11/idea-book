@@ -1,0 +1,96 @@
+@use "../foundation/rem" as r;
+@use "../foundation/mixin" as m;
+
+.idea12 {
+    min-height: 100%;
+    background: #000;
+    color: #fff;
+    text-align: left;
+
+    section {
+        padding: 50px 0;
+    }
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    //vertical
+    .vertical {
+        width: 100vw;
+        height: 200vh;
+        @include m.mq(sp_min) {
+            height: auto;
+        }
+        &__content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            .col_left {
+                width: 50%;
+                height: 100%;
+                @include m.mq(sp_min) {
+                    width: 100%;
+                }
+            }
+            .col_right {
+                width: 40%;
+                @include m.mq(sp_min) {
+                    width: 100%;
+                }
+            }
+        }
+        .vertical__item:not(:last-child) {
+            margin-bottom: 240px;
+            @include m.mq(sp_min) {
+                margin-bottom: 2rem;
+            }
+        }
+        .vertical__heading {
+            font-size: clamp(r.f-rem(40), 4vw, r.f-rem(60));
+            font-weight: 900;
+            line-height: 1.2;
+            text-transform: uppercase;
+            border-left: 3px solid #ff98a2;
+            padding: 25px;
+            margin: 0;
+            @include m.mq(sp_min) {
+                margin-bottom: 3rem;
+            }
+            span {
+                display: block;
+            }
+        }
+        .vertical__title {
+            color: #ff98a2;
+            font-size: clamp(r.f-rem(20), 2vw, r.f-rem(24));
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    //horizontal
+    .horizontal {
+        padding: 100px 0;
+        &__content {
+            display: flex;
+        }
+        .horizontal__item {
+            display: grid;
+            place-content: center;
+            border: 1px solid #efefef;
+            padding: 200px 150px;
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+            .horizontal__num {
+                display: contents;
+                color: #ff98a2;
+                font-size: clamp(r.f-rem(70), 3vw, r.f-rem(80));
+                font-weight: bold;
+            }
+        }
+    }
+}

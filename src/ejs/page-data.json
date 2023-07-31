@@ -10,5 +10,17 @@
         "title": "(各ページ毎のタイトル)",
         "description": "(各ページ毎の説明)",
         "dir": ""
+    },
+    "idea10": {
+        "page": "idea10",
+        "title": "(各ページ毎のタイトル)",
+        "description": "(各ページ毎の説明)",
+        "dir": ""
+    },
+    "idea12": {
+        "page": "idea12",
+        "title": "(各ページ毎のタイトル)",
+        "description": "(各ページ毎の説明)",
+        "dir": ""
     }
 }
