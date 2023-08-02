@@ -1,0 +1,69 @@
+html,body {
+    width: 100%;
+    overscroll-behavior: none;
+    min-height: 100%;
+}
+.idea13 {
+    margin-bottom: 0;
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 100vh;
+        margin: 0 auto;
+        &.gallery {
+            position: relative;
+            height: 100%;
+        }
+        &.end {
+            position: relative;
+            background-color: #003547;
+            h2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-family: 'Bebas Neue';
+                font-size: 8rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 700px;
+        position: relative;
+        background-size: cover;
+        z-index: -1;
+        &:nth-of-type(1) {background-image: url('https://source.unsplash.com/a-man-standing-on-a-boat-in-a-body-of-water-sQyQNEOvzNo');}
+        &:nth-of-type(2) {background-image: url('https://source.unsplash.com/a-woman-walking-down-a-street-past-tall-buildings-1OWUQeoiYqw');}
+        &:nth-of-type(3) {background-image: url('https://source.unsplash.com/a-statue-of-a-woman-holding-a-plate-in-front-of-a-row-of-buildings-8F7R5VnzMWU');}
+        &:nth-of-type(4) {background-image: url('https://source.unsplash.com/a-woman-walking-down-a-sidewalk-next-to-a-body-of-water-nPflgwfRICU');}
+        &:nth-of-type(5) {background-image: url('https://source.unsplash.com/two-seagulls-are-perched-on-a-wooden-structure-GwxgFP4SreY');}
+        &:nth-of-type(6) {background-image: url('https://source.unsplash.com/a-boat-is-docked-in-front-of-a-building-qozQ_8Utk2U');}
+        &:nth-of-type(7) {background-image: url('https://source.unsplash.com/a-building-with-a-cross-on-top-of-it-NzpRb2TmgMQ');}
+        &:nth-of-type(8) {background-image: url('https://source.unsplash.com/an-orange-and-white-cat-laying-on-top-of-a-window-sill-vgYM57x9xWA');}
+        &:nth-of-type(9) {background-image: url('https://source.unsplash.com/a-street-light-hanging-off-the-side-of-a-building-whsHZUVL8Vk');}
+        &:nth-of-type(10) {background-image: url('https://source.unsplash.com/WvXETFRzyTE');}
+        &:nth-of-type(11) {background-image: url('https://source.unsplash.com/a-car-parked-in-front-of-a-building-with-balconies-gvn5fcKxYkM');}
+        &:nth-of-type(12) {background-image: url('https://source.unsplash.com/a-red-building-with-a-window-and-a-balcony-IZV1Y3VEAco');}
+        &:nth-of-type(13) {background-image: url('https://source.unsplash.com/a-canal-with-several-boats-in-it-and-buildings-in-the-background-RLEWyaAQAoo');}
+        &:nth-of-type(14) {background-image: url('https://source.unsplash.com/a-statue-of-an-egyptian-god-in-front-of-a-doorway-o8rIG7DE2Us');}
+        &:nth-of-type(15) {background-image: url('https://source.unsplash.com/a-stone-structure-sitting-on-top-of-a-beach-next-to-the-ocean-aoDWMt2sWPo');}
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            z-index: 4;
+            top: 0;
+            left: 0;
+            border-right: 1px solid black;
+        }
+    }
+    .line {
+        border-right: 1px solid black;
+    }
+
+}
