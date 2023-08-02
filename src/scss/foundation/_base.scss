@@ -13,7 +13,6 @@
 
 html {
     box-sizing: border-box;
-    scroll-behavior: smooth;
     &.is__locked {
         overflow: hidden;
         touch-action: none;
