@@ -1,0 +1,30 @@
+<%
+    page = 'idea14'
+    path = '/'
+%>
+<%-
+    include('./layout/_head', {
+        meta: pageData['idea14']
+    });
+%>
+<main>
+    <div class="idea idea14">
+        <section>
+            <div class="parallax__image"></div>
+            <h2 class="title">first</h2>
+        </section>
+        <section>
+            <div class="parallax__image"></div>
+            <h2 class="title">second</h2>
+        </section>
+        <section>
+            <div class="parallax__image"></div>
+            <h2 class="title">third</h2>
+        </section>
+    </div>
+</main>
+<%-
+    include('./layout/_footer', {
+        meta: pageData['idea14']
+    });
+%>
