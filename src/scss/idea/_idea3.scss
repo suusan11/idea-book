@@ -12,7 +12,7 @@
         .bg {
             position: absolute;
             top: -30px;
-            width: calc(377px + 50vw);
+            width: calc(377px + 40vw);
             height: 500px;
             z-index: -1;
             &.left {
@@ -24,9 +24,20 @@
             .bg-inner {
                 width: 100%;
                 height: 100%;
-                background-color: #939393;
                 clip-path: polygon(0 100%,0 100%,0 100%);
                 transition: clip-path 1s cubic-bezier(.25,.46,.45,.94);
+                &.bg01 {
+                    background-color: #F0DB75;
+                }
+                &.bg02 {
+                    background-color: #B1ACFF;
+                }
+                &.bg03 {
+                    background-color: #EFAFC5;
+                }
+                &.bg04 {
+                    background-color: #bdb08b;
+                }
             }
             &.is__active .bg-inner {
                 clip-path: polygon(0 -100%,0 100%,200% 100%);
