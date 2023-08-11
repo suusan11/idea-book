@@ -63,7 +63,7 @@ if (section_2 !== null) {
         scrollTrigger: {
           trigger: section_2,
           pin: true,
-          scrub: 3,
+          scrub: true,
           snap: 1 / (box_items.length - 1),
           end: "+=" + section_2.offsetWidth //横スクロールだからコンテントの横幅が終わり値になる
 
@@ -77,7 +77,7 @@ if (section_2 !== null) {
         scrollTrigger: {
           trigger: section_2,
           pin: true,
-          scrub: 3,
+          scrub: true,
           snap: 1 / (box_items.length - 1),
           end: "+=" + section_2.offsetWidth //横スクロールだからコンテントの横幅が終わり値になる
 
