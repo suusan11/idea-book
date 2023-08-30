@@ -28,30 +28,29 @@ try {
       link.setAttribute('rel', 'noopener');
     }
   } // Open global menu
+  // const menuBtn = document.getElementById('js-menu-toggle');
+  // const gnav = document.getElementById('js-global-menu');
+  // const body = document.querySelector('body');
+  // let scrollValue;
+  // menuBtn.addEventListener('click', () => {
+  //     menuBtn.classList.toggle('is__open');
+  //     gnav.classList.toggle('is__open');
+  //     body.classList.toggle('is__open');
+  //     if(body.classList.contains('is__open')) {
+  //         scrollValue = window.pageYOffset;
+  //         body.style.top = -scrollValue + 'px';
+  //     }else {
+  //         body.style.removeProperty('top');
+  //         window.scrollTo(0, scrollValue);
+  //     }
+  // });
+  // Internal link
 
 } catch (err) {
   _iterator.e(err);
 } finally {
   _iterator.f();
 }
-
-var menuBtn = document.getElementById('js-menu-toggle');
-var gnav = document.getElementById('js-global-menu');
-var body = document.querySelector('body');
-var scrollValue;
-menuBtn.addEventListener('click', function () {
-  menuBtn.classList.toggle('open');
-  gnav.classList.toggle('open');
-  body.classList.toggle('open');
-
-  if (body.classList.contains('open')) {
-    scrollValue = window.pageYOffset;
-    body.style.top = -scrollValue + 'px';
-  } else {
-    body.style.removeProperty('top');
-    window.scrollTo(0, scrollValue);
-  }
-}); // Internal link
 
 var menus = document.querySelectorAll('.global__menu > ul > li > a');
 menus.forEach(function (menu) {

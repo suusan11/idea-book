@@ -1,0 +1,158 @@
+<%
+    page = 'idea15'
+    path = '/'
+%>
+<%-
+    include('./layout/_head', {
+        meta: pageData['idea15']
+    });
+%>
+<main>
+    <div class="idea idea15">
+        <div class="hamburger hamburger1">
+            <div class="header">
+                <h1>ハンバーガーメニュー①</h1>
+                <p class="reference">参考サイト：<a href="https://qino.jp/">https://qino.jp/</a></p>
+            </div>
+            <section>
+                <div class="global__menu">
+                    <div id="js-menu-toggle" class="menu__toggle">
+                        <div class="bg"></div>
+                        <div class="icon">
+                            <div class="border"></div>
+                            <div class="border"></div>
+                            <div class="border"></div>
+                        </div>
+                    </div>
+                    <div class="menu__wrap">
+                        <nav class="inner">
+                            <ul>
+                                <li>home</li>
+                                <li>about</li>
+                                <li>contact</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <h2>BODY</h2>
+            </section>
+        </div>
+        <div class="hamburger hamburger2">
+            <div class="header">
+                <h1>ハンバーガーメニュー②</h1>
+                <p class="reference">参考サイト：<a href="https://himeji-pudding.com/">https://himeji-pudding.com/</a></p>
+            </div>
+            <section>
+                <div class="global__menu">
+                    <div id="js-open-toggle" class="open__toggle">
+                        <span class="border"></span>
+                        <span class="border"></span>
+                        <span class="border"></span>
+                    </div>
+                    <div class="menu__container">
+                        <div class="menu__wrap">
+                            <div id="js-close-toggle" class="close__toggle">
+                                <span class="border"></span>
+                                <span class="border"></span>
+                            </div>
+                            <nav class="inner">
+                                <ul>
+                                    <li>home</li>
+                                    <li>about</li>
+                                    <li>contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <h2>BODY</h2>
+            </section>
+        </div>
+        <div class="hamburger hamburger3">
+            <div class="header">
+                <h1>ハンバーガーメニュー③</h1>
+                <p class="reference">参考サイト：<a href="https://www.beardpapa.jp/">https://www.beardpapa.jp/</a></p>
+            </div>
+            <section>
+                <div id="js-menu3" class="menu__container">
+                    <div class="outer">
+                        <div id="js-menu3-btn" class="btn">
+                            <span class="icon"></span>
+                            <p id="js-menu-text" class="text">Menu</p>
+                        </div>
+                        <div class="inner">
+                            <ul class="close">
+                                <li>Line up</li>
+                                <li>Shop</li>
+                                <li>News</li>
+                            </ul>
+                            <nav class="open">
+                                <div class="inner__menu">
+                                    <ul>
+                                        <li>Home</li>
+                                        <li>Line up</li>
+                                        <li>Shop</li>
+                                        <li>News</li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <h2>BODY</h2>
+            </section>
+        </div>
+        <div class="hamburger hamburger4">
+            <div class="header">
+                <h1>ハンバーガーメニュー④</h1>
+                <p class="reference">参考サイト：<a href="https://www.tnsc.tn-sanso.co.jp/jp/recruit/">https://www.tnsc.tn-sanso.co.jp/jp/recruit/</a></p>
+            </div>
+            <section>
+                <div class="global__menu">
+                    <div id="js-menu4" class="menu__wrap">
+                        <nav class="inner">
+                            <ul>
+                                <li>home</li>
+                                <li>about</li>
+                                <li>contact</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div id="js-menu4-btn" class="menu__button">MENU</div>
+                </div>
+                <h2>BODY</h2>
+            </section>
+        </div>
+        <div class="hamburger hamburger5">
+            <div class="header">
+                <h1>ハンバーガーメニュー⑤</h1>
+                <p class="reference">参考サイト：<a href="https://nitowa.jp/">https://nitowa.jp/</a></p>
+            </div>
+            <section>
+                <div id="js-menu5" class="global__menu">
+                    <button id="js-menu5-btn" class="menu__button" aria-haspopup="true" aria-expanded="false">
+                        <span class="js-hamburger__bar border" aria-hidden="true"></span>
+                        <span class="text" aria-hidden="true"></span>
+                    </button>
+                    <nav id="js-drawer" class="menu__wrap" aria-labelledby="js-hamburger">
+                        <div class="inner__nav">
+                            <ul>
+                                <li>home</li>
+                                <li>about</li>
+                                <li>products</li>
+                                <li>shop</li>
+                                <li>contact</li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <h2>BODY</h2>
+            </section>
+        </div>
+    </div>
+</main>
+<%-
+    include('./layout/_footer', {
+        meta: pageData['idea15']
+    });
+%>
