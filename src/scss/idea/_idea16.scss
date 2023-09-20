@@ -1,0 +1,28 @@
+.mainvisual {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    .bg {
+        width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+        object-fit: cover;
+    }
+    .anime-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .anime-target {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            opacity: 0;
+        }
+    }
+}
