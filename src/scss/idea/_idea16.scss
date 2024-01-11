@@ -19,10 +19,72 @@
             position: absolute;
             top: 50%;
             left: 40%;
-            width: 175px;
-            height: 175px;
-            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            // border-radius: 50%;
+            // border-width: 5px;
+            // border-style: solid;
+            // border-color: inherit;
             opacity: 0;
+            &.triangle {
+                // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                position: relative;
+                border-top-left-radius: 30%;
+                transform: rotate(30deg) skewY(20deg);
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: inherit;
+                    height: inherit;
+                    background-color: inherit;
+                }
+                &::before {
+                    border-top-right-radius: 30%;
+                    transform: skewX(-45deg) translateX(50%);
+                }
+                &::after {
+                    border-bottom-left-radius: 30%;
+                    transform: skewY(-45deg) translateY(50%);
+                }
+            }
+            &.square {
+                border-radius: 10px;
+            }
+            &.circle {
+                border-radius: 50%;
+            }
         }
     }
 }
+
+// .triangle {
+//     // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+//     position: relative;
+//     left: 50%;
+//     width: 150px;
+//     height: 150px;
+//     background-color: orange;
+//     transform: rotate(30deg) skewY(30deg) scaleX(.86666) translateY(-50%);
+//     border-top-left-radius: 30%;
+//     &::before,
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: inherit;
+//         height: inherit;
+//         background-color: inherit;
+//     }
+//     &::before {
+//         border-top-right-radius: 30%;
+//         transform: skewX(-45deg) translateX(50%);
+//     }
+//     &::after {
+//         border-bottom-left-radius: 30%;
+//         transform: skewY(-45deg) translateY(50%);
+//     }
+// }

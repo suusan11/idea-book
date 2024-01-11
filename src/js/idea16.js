@@ -1,26 +1,34 @@
 const animeContainer = document.querySelector('#js-anime-container');
 let els = [];
-const elNum = 19;
+const elNum = 21;
 // function createElm() {
     for(let i = 0; i < elNum; i++) {
         els[i] = document.createElement('div');
         els[i].id = "js-anime-target-" + (i + 1);
-        els[i].classList.add("anime-target");
+        
+        if(i < 7) {
+            els[i].classList.add("anime-target", "circle");
+        } else if(i > 8 && i < 14) {
+            els[i].classList.add("anime-target", "square");
+        } else {
+            els[i].classList.add("anime-target", "triangle");
+        }
         animeContainer.appendChild(els[i]);
     }
 // }
 
 const colorCode = ["#F20587", "#861BF2", "#5C82F2", "#07DBF2", "#07F2B0", "#E3BA62", "#5B5AA9"];
 // const colorCode = ["#e60012", "#e95189", "#0cade7", "#00a0b8", "#fcc800", "#9edef5", "#f06671"];
-function setRandomColor() {
-    for(let i = 0; i < elNum; i++) {
-        const colorNum = Math.floor(Math.random() * colorCode.length);
-        const rondomColor = colorCode[colorNum];
-        els[i].style.backgroundColor = rondomColor;
-        // gsap.set(els[i], {backgroundColor: rondomColor})
-        // return rondomColor;
-    }
-}
+// function setRandomColor() {
+//     for(let i = 0; i < elNum; i++) {
+//         const colorNum = Math.floor(Math.random() * colorCode.length);
+//         const rondomColor = colorCode[colorNum];
+//         els[i].style.backgroundColor = rondomColor;
+//         els[i].style.borderColor = rondomColor;
+//         // gsap.set(els[i], {backgroundColor: rondomColor})
+//         // return rondomColor;
+//     }
+// }
 
 const minScale = .05;
 const maxScale = .7;
@@ -48,6 +56,7 @@ for(let i = 0; i < els.length; i++) {
         odd.push(els[i]);
     }
 }
+console.log(odd);
 
 // unexpectedly v.1
 // function play() {
@@ -281,6 +290,13 @@ function play() {
                     return rondomColor;
                 }
             },
+            // borderColor: function setRandomColor() {
+            //     for(let i = 0; i < elNum; i++) {
+            //         const colorNum = Math.floor(Math.random() * colorCode.length);
+            //         const rondomColor = colorCode[colorNum];
+            //         return rondomColor;
+            //     }
+            // },
             scale: function setRandomNum() {
                 for (let i = 0; i < elNum; i++) {
                     const changeNum = Math.random() * (maxScale - minScale) + minScale.toFixed(2);
@@ -293,6 +309,7 @@ function play() {
                     return changeNum;
                 }
             },
+            // clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
             // ease: Power0.easeOut,
             ease: Power2.easeInOut,
             // delay: .5 * Math.random(),
@@ -320,6 +337,13 @@ function play() {
                     return rondomColor;
                 }
             },
+            // borderColor: function setRandomColor() {
+            //     for(let i = 0; i < elNum; i++) {
+            //         const colorNum = Math.floor(Math.random() * colorCode.length);
+            //         const rondomColor = colorCode[colorNum];
+            //         return rondomColor;
+            //     }
+            // },
             scale: function setRandomNum() {
                 for (let i = 0; i < elNum; i++) {
                     const changeNum = Math.random() * (maxScale - minScale) + minScale.toFixed(2);
@@ -332,6 +356,7 @@ function play() {
                     return changeNum;
                 }
             },
+            // clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
             // ease: Power0.easeOut,
             ease: Power2.easeInOut,
             // delay: .5 * Math.random(),
